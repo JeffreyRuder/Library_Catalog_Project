@@ -93,16 +93,6 @@ public class Book {
     }
   }
 
-  public String getAuthorsString() {
-    List<Author> authors = this.getAllAuthors();
-    String results = "|";
-    for ( Author author : authors ) {
-      String newAuthor = author.getFullName();
-      results += (" " + newAuthor + " |");
-    }
-    return results;
-  }
-
   public boolean assignAuthor(int authorId) {
     boolean isNotDuplicate = true;
     for (Author author : this.getAllAuthors()) {
